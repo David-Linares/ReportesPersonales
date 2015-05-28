@@ -1,22 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="reporte">
 <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/lib/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/lib/material.min.css">
+	<link rel="stylesheet" type="text/css" href="css/lib/ripples.min.css">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
-
+	<div ng-include="'templates/nav.html'"></div>
+	<div class="container">
+		<div ng-view></div>
+	</div>
 </body>
 <!--Libraries-->
+<script type="text/javascript" src="js/lib/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="js/lib/bootstrap.min.js"></script>
+
 <script type="text/javascript" src="js/lib/angular.min.js"></script>
 <script type="text/javascript" src="js/lib/angular-route.min.js"></script>
 <script type="text/javascript" src="js/lib/angular-resource.min.js"></script>
 <script type="text/javascript" src="js/lib/angular-animate.min.js"></script>
+
 <script type="text/javascript" src="js/lib/firebase.js"></script>
 <script type="text/javascript" src="js/lib/angularfire.min.js"></script>
-<script type="text/javascript" src="js/lib/jquery-2.1.4.min.js"></script>
+
+<script type="text/javascript" src="js/lib/material.min.js"></script>
+<script type="text/javascript" src="js/lib/ripples.min.js"></script>
+<script type="text/javascript" src="js/lib/ui-bootstrap-tpls.min.js"></script>
+<script type="text/javascript" src="js/lib/toaster.min.js"></script>
 
 <!--Own Scripts-->
+<script type="text/javascript">
+	$(document).ready(function(){
+		$.material.init()
+	})
+</script>
 <script type="text/javascript" src="js/app/app.js"></script>
 <script type="text/javascript" src="js/app/controllers/controllers.js"></script>
 <script type="text/javascript" src="js/app/services/services.js"></script>
